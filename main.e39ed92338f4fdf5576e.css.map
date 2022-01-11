@@ -1,0 +1,1 @@
+{"version":3,"file":"main.e39ed92338f4fdf5576e.css","mappings":"AAAA,KACE,yBAGF,GACE,W","sources":["webpack://rpdcreator_frontend/./src/styles/Main.scss"],"sourcesContent":["body {\r\n  background-color: chartreuse;\r\n}\r\n\r\nh1 {\r\n  color: gray;\r\n}"],"names":[],"sourceRoot":""}
