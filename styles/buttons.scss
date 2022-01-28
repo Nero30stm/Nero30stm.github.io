@@ -1,0 +1,423 @@
+button {
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.first-button {
+  background-color: $bg-blue_light;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px 15px 20px;
+  border-radius: 10px;
+
+  &.select {
+    background-color: $bg-select-button;
+  }
+
+  &.spaced {
+    justify-content: space-between;
+  }
+}
+
+.white-button {
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px 20px 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: $ft-added_light;
+}
+
+.float-button {
+  position: sticky;
+  width: 200px;
+  color: white;
+  background: linear-gradient(90.01deg, #366EFF 0.01%, #FA00FF 49.61%, #FF3D00 99.21%);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  bottom: 60px;
+  gap: 10px;
+  float: none;
+
+  span {
+    color: white;
+  }
+}
+
+.link {
+  color: $ft-main-blue_light;
+  cursor: pointer;
+}
+
+.button-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.img-addition {
+  @include themed() {
+    background-color: t(bg-button);
+  }
+  height: 80px;
+  width: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  @include media-breakpoint-down(lg) {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon {
+    @include icons;
+    height: 28px;
+    width: 28px;
+    background-image: url("/images/main/adding.svg");
+  }
+}
+
+.chips-list {
+  @include no-list;
+  display: flex;
+  gap: 10px 10px;
+  flex-wrap: wrap;
+}
+
+.mini-chips-list {
+  @include no-list;
+  display: flex;
+  gap: 10px 5px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: flex;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  span {
+    color: white;
+  }
+
+  @include themed(){
+    background-color: t(bg-blue);
+    color: t(ft-inverse);
+  }
+}
+
+.chip-deleting {
+  display: flex;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  align-items: center;
+  gap: 10px;
+
+  @include themed(){
+    background-color: t(bg-main);
+    color: t(ft-main);
+  }
+
+  .close {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.round-button {
+  @include themed() {
+    background-color: t(bg-main);
+  }
+  box-shadow: 0 0 10px 0 #00000026;
+  display: flex;
+  align-items: center;
+  color: $ft-main-blue_light;
+  width: fit-content;
+  border-radius: 20px;
+  padding: 10px 15px 10px 15px;
+
+  &.active {
+    @include themed() {
+      background-color: t(bg-blue);
+    }
+    color: white;
+  }
+}
+
+.gradient-button {
+  background: linear-gradient(90.01deg, #366EFF 0.01%, #FA00FF 49.61%, #FF3D00 99.21%);
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px 20px 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  &:disabled {
+    color: $ft-not-active_light;
+    background: white;
+
+  }
+}
+
+.attention-button {
+  background-color: #FF3D00;
+  color: white;
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px 20px 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.mini {
+    max-width: 160px;
+  }
+}
+
+.secondary-button {
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px 20px 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.spaced {
+    justify-content: space-between;
+  }
+
+  @include themed() {
+    background-color: t(bg-main);
+  }
+}
+
+.third-button {
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px 20px 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button {
+  width: fit-content;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  height: auto;
+
+  &.calendar {
+    padding: 0;
+    width: 18px;
+    height: 18px;
+  }
+
+  &.close {
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    margin-right: 15px;
+  }
+}
+
+.check-container {
+
+  input[type='checkbox'] {
+    height: 0;
+    width: 0;
+  }
+
+  input[type='checkbox'] + label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #1F1A2D;
+    transition: color 250ms cubic-bezier(.4, .0, .23, 1);
+  }
+
+  input[type='checkbox'] + label > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    min-width: 14px;
+    min-height: 14px;
+    background: transparent;
+    border: 1px solid #5F5088;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 250ms cubic-bezier(.4, .0, .23, 1);
+  }
+
+  input[type='checkbox'] + label:hover, input[type='checkbox']:focus + label {
+    color: #1F1A2D;
+  }
+
+  input[type='checkbox'] + label:hover > span, input[type='checkbox']:focus + label > span {
+    background: rgba(255, 255, 255, .1);
+  }
+
+
+  input[type='checkbox']:checked + label > span {
+    border: none;
+    background: linear-gradient(180deg, #769CFF 0%, #FA00FF 53.12%, #FF3D00 100%);
+    border-radius: 5px;
+    animation: shrink-bounce 200ms cubic-bezier(.4, .0, .23, 1);
+  }
+
+  input[type='checkbox']:checked + label > span:before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 2px;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transform: rotate(45deg);
+    transform-origin: 0% 100%;
+    animation: checkbox-check 125ms 250ms cubic-bezier(.4, .0, .23, 1) forwards;
+  }
+
+  @keyframes shrink-bounce {
+    0% {
+      transform: scale(1);
+    }
+    33% {
+      transform: scale(.85);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes checkbox-check {
+    0% {
+      width: 0;
+      height: 0;
+      border-color: white;
+      transform: translate3d(0, 0, 0) rotate(45deg);
+    }
+    33% {
+      width: 4px;
+      height: 0;
+      transform: translate3d(0, 0, 0) rotate(45deg);
+    }
+    100% {
+      width: 4px;
+      height: 8px;
+      border-color: white;
+      transform: translate3d(0, -.5em, 0) rotate(45deg);
+    }
+  }
+}
+
+.radio-container {
+
+
+  input[type='checkbox'] {
+    height: 0;
+    width: 0;
+  }
+
+  input[type='checkbox'] + label {
+    position: relative;
+    align-items: center;
+    color: #1F1A2D;
+    background-color: white;
+    padding: 18px;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  input[type='checkbox'] + label > div > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    min-width: 18px;
+    min-height: 18px;
+    background: white;
+    border: 2px solid #847E95;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 250ms cubic-bezier(.4, .0, .23, 1);
+
+  }
+
+  input[type='checkbox'] + label:hover, input[type='checkbox']:focus + label {
+    color: #1F1A2D;
+  }
+
+  input[type='checkbox'] + label:hover > span, input[type='checkbox']:focus + label > span {
+    background: rgba(255, 255, 255, .1);
+  }
+
+
+  input[type='checkbox']:checked + label > div > span {
+
+  }
+
+  .before-container {
+    position: relative;
+    width: 18px;
+    height: 18px;
+  }
+
+  input[type='checkbox']:checked + label > div > span:before {
+    content: "";
+    position: absolute;
+    background-color: #6473f8;
+
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+.back-button {
+  display: flex;
+
+  .arrow-left {
+    margin-right: 10px;
+  }
+}
