@@ -1,0 +1,214 @@
+.addition-inf {
+  padding-top: 10px;
+  height: auto;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  gap: 10px;
+  overflow: auto;
+
+}
+.person-information-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.bordered-item {
+  width: 100%;
+}
+
+.added-inf-block-content {
+  margin-top: 15px;
+}
+
+.items-list {
+  @include no-list;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  & > li {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.bordered-item {
+  padding: 15px;
+  border: 1px solid $br-gray-border_light;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &.center {
+    align-items: center;
+  }
+}
+
+.inf-block-container {
+  width: 100%;
+}
+
+.companies-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .career-list-item {
+    padding-top: 15px;
+  }
+
+  > :not(:last-child) {
+    border-bottom: 1px solid $br-gray-border_light;
+    padding-bottom: 15px;
+  }
+
+}
+
+.career-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+  .date-block {
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: #366EFF;
+    flex-shrink: 0;
+  }
+}
+
+.spaced {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  .edit {
+    flex-shrink: 0;
+  }
+}
+
+.counter {
+  padding: 15px 20px;
+  background-color: $bg-blue_light;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+
+  .text {
+    color: white;
+  }
+}
+
+.person-information-added-inf-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .list-item {
+    border: 1px solid $br-head-bottom_light;
+    border-radius: 10px;
+    display: flex;
+    padding: 15px;
+  }
+
+  .personal-inf {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .bottom-container {
+    @include themed() {
+      border-color: t(br-head-bottom);
+    }
+    border-top: 1px solid;
+    padding-top: 10px;
+
+    span {
+      font-size: 14px;
+    }
+  }
+
+  .country {
+    gap: 10px;
+  }
+}
+
+.chips-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .list-item {
+    @include themed() {
+      background-color: t(bg-main);
+    }
+    border: 1px solid $br-head-bottom_light;
+    border-radius: 10px;
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .text-gray {
+    font-size: 14px;
+  }
+
+  .comment-text {
+    font-size: 14px;
+    font-style: normal;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    text-align: left;
+  }
+
+  .icons-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+  }
+}
+
+.added-inf-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 24px 30px;
+
+}
+
+.round-buttons-list {
+  @include no-list;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  position: sticky;
+  top: 0;
+}

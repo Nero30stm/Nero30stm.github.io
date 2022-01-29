@@ -1,0 +1,143 @@
+* {
+  @include themed() {
+    color: t(ft-added);
+  }
+  font-family: Manrope;
+  font-weight: bold;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-align: left;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 0.98em;
+  }
+}
+
+h1 {
+  display: none;
+}
+
+@mixin main-blue-text {
+  color: $ft-main-blue_light;
+}
+
+@mixin not-active-text {
+  color: $ft-not-active_light;
+}
+
+@mixin addition-blue {
+  color: $ft-addition-blue_light;
+}
+
+.blue {
+  color: $ft-addition-blue_light;
+}
+
+.user-name {
+  @include themed() {
+    color: t(ft-added);
+  }
+  font-family: Manrope;
+  font-weight: 600;
+}
+
+.notification-count {
+  font-weight: bold;
+  color: $ft-attention-red_light;
+
+  @include media-breakpoint-only(xs) {
+    color: white;
+  }
+}
+
+.not-active {
+  @include themed() {
+    color: t(ft-not-active);
+  }
+  font-weight: lighter;
+}
+
+.text-gray {
+  @include themed() {
+    color: t(ft-not-active);
+  }
+  font-weight: bold;
+}
+
+.gradient-ft{
+  background: linear-gradient(90.01deg, #366EFF 0.01%, #FA00FF 49.61%, #FF3D00 99.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.h4 {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.paragraph {
+  color: $ft-not-active_light;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  text-align: left;
+
+  .link {
+    font-size: 13px;
+  }
+
+}
+
+.attention {
+  font-weight: bold;
+  color: $ft-attention-red_light;
+}
+
+.added-inf-name {
+  @include main-blue-text;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
+
+.text-white {
+  color: white;
+}
+
+.blue-paragraph {
+  background-color: $bg-blue_dark;
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px 20px 15px 20px;
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+}
+
+.label {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: $ft-not-active_dark;
+}
+
+.black-label {
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+}
+
+.nav-item-name {
+  color: $ft-not-active_light;
+}
